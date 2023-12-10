@@ -27,4 +27,4 @@ if __name__ == "__main__":
     elif operator == '/':
         result = div(a, b)
 
-    print("{:d} {:s} {:d} = {
+    print("{:d} {:s} {:d} = {:d}".format(a, operator, b, result))
