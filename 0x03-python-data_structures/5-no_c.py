@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def no_c(my_string):
     """This variable will be used to accumulate the characters
     from my_string that are not 'c' or 'C."""
