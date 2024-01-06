@@ -1,23 +1,28 @@
 #!/usr/bin/python3
-""" Defines a Square """
+
+"""Define a class Square."""
 
 
 class Square:
-    """ Represent a class Square """
+    """Represent a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """ Initialize the class attributes """
-        self.__size = size
-        self.__position = position
+        """Initialize a new square.
+
+        Args:
+            size (int): The size of the new square.
+            position (int, int): The position of the new square.
+        """
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        """ Retrieves the private attribute size """
-        return self.__size
+        """Get/set the current size of the square."""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
-        """ Setting the private attribute size to value """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -26,25 +31,24 @@ class Square:
 
     @property
     def position(self):
-        """ To retrieve the private attribute position """
-        return self.__position
+        """Get/set the current position of the square."""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
-        """ To set position """
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
-                not all(isinstance(n, int) for n in value) or
-                not all(n >= 0 for n in value)):
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
-        """ returns the current square area """
-        return self.__size * self.__size
+        """Return the current area of the square."""
+        return (self.__size * self.__size)
 
     def my_print(self):
-        """ prints in stdout the square with the character # """
+        """Print the square with the # character."""
         if self.__size == 0:
             print("")
             return
