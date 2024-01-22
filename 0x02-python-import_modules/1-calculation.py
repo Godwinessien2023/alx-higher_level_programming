@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-if __name__ == " __main__":
-    import calculator_1
+if __name__ == "__main__":
+    from calculator_1 import add, sub, mul, div
+
 # define variables for a and b
     a = 10
     b = 5
-# represent each calculation
-    sum_result = calculator_1.add(a, b)
-    sub_result = calculator_1.sub(a, b)
-    mul_result = calculator_1.mul(a, b)
-    div_result = calculator_1.div(a, b)
+
+    addition = add(a, b)
+    minus = sub(a, b)
+    multiply = mul(a, b)
+    division = div(a, b)
 # print answers
-    print(f"a + b = {sum_result}")
-    print(f"a - b = {sub_result}")
-    print(f"a * b = {mul_result}")
-    print(f"a / b = {div_result}")
+    print(f"a + b = {addition :d}")
+    print(f"a - b = {minus :d}")
+    print(f"a * b = {multiply :d}")
+    print(f"a / b = {division :d}")
