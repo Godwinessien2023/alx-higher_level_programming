@@ -5,13 +5,9 @@ if __name__ == "__main__":
 # define variables for a and b
     a = 10
     b = 5
-
-    addition = add(a, b)
-    minus = sub(a, b)
-    multiply = mul(a, b)
-    division = div(a, b)
 # print answers
-    print(f"a + b = {addition :d}")
-    print(f"a - b = {minus :d}")
-    print(f"a * b = {multiply :d}")
-    print(f"a / b = {division :d}")
+
+   print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+    print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+    print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
