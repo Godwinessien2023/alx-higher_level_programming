@@ -1,12 +1,22 @@
+
+#!/usr/bin/python3
+def safe_print_integer(value):
+    try:
+        if (isinstance(value, int)):
+            print("{:d}".format(value))
+            return True
+        else:
+            return False
+    except Exception as e:
+        return e
 #!/usr/bin/python3
 
 def safe_print_integer(value):
     try:
-        for i in range(len(value)):
-            if isdigit(value[i], int):
-                print("{:d}".format(value[i]), end="")
-        print() 
-        return True
+        if isinstance(value[i], int):
+            print("{:d}".format(value)) 
+            return True
+        else:
+            return False
     except ValueError:
-        print()
-        return False
+        return ValueError
