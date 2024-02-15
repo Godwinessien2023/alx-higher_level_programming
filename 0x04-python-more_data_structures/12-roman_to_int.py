@@ -1,26 +1,12 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    table = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+
     if not isinstance(roman_string, str) or roman_string is None:
         return 0
+    prev, sum = 0, 0
 
-    roman_values = {
-            'I': 1, 'V': 5, 'X': 10, 'L': 50,
-            'C': 100, 'D': 500, 'M': 1000
-            }
-
-    total = 0
-    prev_value = 0
-
-    for char in reversed(roman_string):
-        if char not in roman_values:
-            return 0
-        value = roman_values[char]
-
-        if value < prev_value:
-            total -= value
-        else:
-            total += value
-
-        prev_value = value
-
-    return total
+    for c in roman_string:
+        sum += table[c] if table[c] <= prev else table[c] - prev * 2
+        prev = table[c]
+    return sum
