@@ -4,6 +4,6 @@
 
 class Square:
 
-""" shows an empty class """
+  """ shows an empty class """
 
   pass
