@@ -13,3 +13,4 @@ class Square:
     
     """define area"""
     def area(self):
+        pass
