@@ -5,7 +5,7 @@
 
 class Square:
     """ the attribute object is a dimention"""
-    
+
     def __init__(self, size):
         self.__size = size
     pass
