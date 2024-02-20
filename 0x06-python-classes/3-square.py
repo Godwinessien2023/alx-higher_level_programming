@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 """define a class"""
+
+
 class Square:
     """ define object of the class"""
     def __init__(self, size=0):
+
+        """initialize an instance of the class"""
         self.__size = size
 
         """define if size is an integer"""
@@ -13,4 +17,4 @@ class Square:
     
     """define area"""
     def area(self):
-        pass
+        return (self.size **2)
