@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-
-""" This is a class for a swuare"""
+"""Defines a class Square"""
 
 
 class Square:
+    """ Represent a Square """
 
-    """This tim with an objecy attribute"""
     def __init__(self, size=0):
-        """ initialixes a class attribute"""
-        self.size = size
+        """ initialize the class attributes to be available
+            to each instance of the class
+        """
+        self.__size = size
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-
-    elif size < 0:
-        raise ValueError(size must be >= 0)
+        elif size < 0:
+            raise ValueError("size must be >= 0")
