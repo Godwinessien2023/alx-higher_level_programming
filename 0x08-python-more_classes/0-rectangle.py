@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-class Rectangle:
-    """
-    This is a simple Rectangle class.
+"""Defines a Rectangle class."""
 
-    Attributes:
-    - width (int): The width of the rectangle.
-    - height (int): The height of the rectangle.
-    """
+
+class Rectangle:
+    """Represent a rectangle."""
     pass
