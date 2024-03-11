@@ -1,0 +1,53 @@
+# Test Case: test_base_geometry.txt
+
+Description:
+This test case checks the functionality of the BaseGeometry class methods.
+
+Classes:
+    BaseGeometry: Represents a base geometry class.
+
+Methods:
+    area(): Not yet implemented. Raises an exception.
+    integer_validator(name, value): Validates a parameter as an integer.
+
+Test Cases:
+-------------------------------------------
+
+case 0: area method not implemented
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.area()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "path/to/your/file.py", line 8, in area
+    raise Exception("area() is not implemented")
+Exception: area() is not implemented
+
+-------------------------------------------
+
+case 1: integer_validator with valid integer
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.integer_validator("side_length", 5)
+
+-------------------------------------------
+
+case 2: integer_validator with non-integer value
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.integer_validator("side_length", "not_an_integer")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "path/to/your/file.py", line 18, in integer_validator
+    raise TypeError("{} must be an integer".format(name))
+TypeError: side_length must be an integer
+
+-------------------------------------------
+
+case 3: integer_validator with non-positive integer value
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.integer_validator("side_length", -2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "path/to/your/file.py", line 20, in integer_validator
+    raise ValueError("{} must be greater than 0".format(name))
+ValueError: side_length must be greater than 0
+
+-------------------------------------------
