@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+"""
+Test Case: my_list_test.txt
+
+Description:
+This test case demonstrates the usage of the `MyList` class and its `print_sorted()` method.
+
+Steps:
+1. Import the `MyList` class from the module "1-my_list".
+2. Create an instance of the `MyList` class.
+3. Append elements to the list: 1, 4, 2, 3, 5.
+4. Print the original state of the list.
+5. Call the `print_sorted()` method to print the list in sorted order.
+6. Print the state of the list after sorting.
+
+Expected Output:
+Original List: [1, 4, 2, 3, 5]
+Sorted List: [1, 2, 3, 4, 5]
+Final List: [1, 4, 2, 3, 5]  # The original list remains unchanged after sorting.
+"""
+
+MyList = __import__('1-my_list').MyList
+
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+print(f"Original List: {my_list}")
+my_list.print_sorted()
+print(f"Final List: {my_list}")  # The original list remains unchanged after sorting.
