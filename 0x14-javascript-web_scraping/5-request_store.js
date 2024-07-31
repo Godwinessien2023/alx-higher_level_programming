@@ -9,12 +9,9 @@ request.get(url, (error, response, body) => {
   if (error) {
     console.log(error);
   }
-
-  fs.writeFile(filePath, body, 'utf8', (err) => {
+  fs.writeFile(filePath, body, 'utf8', (err, data) => {
     if (err) {
-      console.error('An error occurred while writing to the file:', err);
-      return;
+      console.log(err);
     }
-    console.log('File has been written successfully');
   });
 });
